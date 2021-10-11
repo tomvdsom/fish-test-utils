@@ -6,6 +6,7 @@ set --global _tmp_dir (mktemp -d)
 
 # Cleanup
 function _ftutil_tempdir_test_cleanup --on-event fish_exit
+    set --erase --universal _ftutil_tempdir_test_tmpdir_cleanup
     rmdir $_tmp_dir
 end
 
